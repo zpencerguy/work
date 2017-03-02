@@ -1,0 +1,255 @@
+AssociationModelVariant<Pmml="<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<PMML version="4.1" xmlns="http://www.dmg.org/PMML-4_1">
+
+  <Header copyright="Copyright (c) 2016 by MicroStrategy, Inc.">
+    <Application name="MicroStrategy Association Rules" version="9.3.000.055"/>
+    <Timestamp>Fri Dec 16 11:40:33 2016</Timestamp>
+  </Header>
+
+  <DataDictionary numberOfFields="2">
+    <DataField dataType="double" name="POS Txn" optype="categorical">
+      <Extension extender="MicroStrategy" name="metric expression" value="Max([POS Txn]){~}"/>
+    </DataField>
+    <DataField dataType="double" name="Dept" optype="categorical">
+      <Extension extender="MicroStrategy" name="metric expression" value="Max([Dept]){~}"/>
+    </DataField>
+  </DataDictionary>
+
+  <AssociationModel functionName="associationRules" minimumConfidence="0.05" minimumSupport="0.02" modelName="Max(Dept){~} Predictor" numberOfItems="160" numberOfItemsets="11" numberOfRules="22" numberOfTransactions="2064">
+    <Extension extender="MicroStrategy" name="maxItemsPerItemset" value="1"/>
+    <Extension extender="MicroStrategy" name="max-consequent-support" value="1"/>
+    <MiningSchema>
+      <MiningField invalidValueTreatment="asIs" missingValueReplacement="630390855" missingValueTreatment="asMode" name="POS Txn" outliers="asIs" usageType="group"/>
+      <MiningField name="Dept" outliers="asIs" usageType="active"/>
+    </MiningSchema>
+    <Output>
+      <OutputField algorithm="exclusiveRecommendation" dataType="string" feature="ruleValue" name="Max(Dept){~} Predictor - Rule(confidence,1)" optype="categorical" rank="1" rankBasis="confidence" ruleFeature="rule"/>
+      <OutputField algorithm="exclusiveRecommendation" dataType="double" feature="ruleValue" name="Max(Dept){~} Predictor - Confidence(confidence,1)" optype="continuous" rank="1" rankBasis="confidence" ruleFeature="confidence"/>
+    </Output>
+    <ModelStats>
+      <UnivariateStats field="Dept">
+        <Counts cardinality="160" missingFreq="0" totalFreq="4538"/>
+      </UnivariateStats>
+      <UnivariateStats field="POS Txn">
+        <Counts cardinality="2064" missingFreq="0" totalFreq="4538"/>
+      </UnivariateStats>
+    </ModelStats>
+    <Item id="54" value="1"/>
+    <Item id="100" value="10"/>
+    <Item id="8" value="100"/>
+    <Item id="3" value="102"/>
+    <Item id="70" value="104"/>
+    <Item id="42" value="105"/>
+    <Item id="21" value="106"/>
+    <Item id="63" value="107"/>
+    <Item id="41" value="108"/>
+    <Item id="45" value="109"/>
+    <Item id="126" value="11"/>
+    <Item id="22" value="110"/>
+    <Item id="138" value="111"/>
+    <Item id="27" value="113"/>
+    <Item id="125" value="12"/>
+    <Item id="50" value="122"/>
+    <Item id="24" value="128"/>
+    <Item id="151" value="129"/>
+    <Item id="88" value="13"/>
+    <Item id="120" value="131"/>
+    <Item id="71" value="132"/>
+    <Item id="107" value="133"/>
+    <Item id="158" value="134"/>
+    <Item id="10" value="135"/>
+    <Item id="9" value="138"/>
+    <Item id="140" value="14"/>
+    <Item id="82" value="141"/>
+    <Item id="13" value="143"/>
+    <Item id="65" value="144"/>
+    <Item id="55" value="146"/>
+    <Item id="38" value="147"/>
+    <Item id="96" value="148"/>
+    <Item id="143" value="149"/>
+    <Item id="57" value="150"/>
+    <Item id="156" value="151"/>
+    <Item id="56" value="152"/>
+    <Item id="58" value="154"/>
+    <Item id="121" value="155"/>
+    <Item id="33" value="156"/>
+    <Item id="59" value="157"/>
+    <Item id="1" value="158"/>
+    <Item id="29" value="160"/>
+    <Item id="129" value="164"/>
+    <Item id="80" value="165"/>
+    <Item id="145" value="166"/>
+    <Item id="79" value="167"/>
+    <Item id="11" value="169"/>
+    <Item id="72" value="17"/>
+    <Item id="20" value="170"/>
+    <Item id="17" value="171"/>
+    <Item id="4" value="175"/>
+    <Item id="6" value="176"/>
+    <Item id="2" value="177"/>
+    <Item id="12" value="178"/>
+    <Item id="5" value="179"/>
+    <Item id="148" value="18"/>
+    <Item id="76" value="182"/>
+    <Item id="89" value="183"/>
+    <Item id="114" value="184"/>
+    <Item id="155" value="185"/>
+    <Item id="113" value="19"/>
+    <Item id="91" value="2"/>
+    <Item id="153" value="200"/>
+    <Item id="150" value="202"/>
+    <Item id="149" value="204"/>
+    <Item id="103" value="21"/>
+    <Item id="157" value="213"/>
+    <Item id="144" value="214"/>
+    <Item id="152" value="219"/>
+    <Item id="135" value="22"/>
+    <Item id="36" value="23"/>
+    <Item id="124" value="235"/>
+    <Item id="51" value="24"/>
+    <Item id="159" value="242"/>
+    <Item id="0" value="250"/>
+    <Item id="92" value="26"/>
+    <Item id="34" value="263"/>
+    <Item id="75" value="264"/>
+    <Item id="61" value="265"/>
+    <Item id="25" value="266"/>
+    <Item id="123" value="268"/>
+    <Item id="69" value="269"/>
+    <Item id="28" value="27"/>
+    <Item id="18" value="270"/>
+    <Item id="86" value="272"/>
+    <Item id="97" value="273"/>
+    <Item id="84" value="277"/>
+    <Item id="43" value="278"/>
+    <Item id="102" value="28"/>
+    <Item id="98" value="288"/>
+    <Item id="87" value="29"/>
+    <Item id="26" value="292"/>
+    <Item id="48" value="294"/>
+    <Item id="30" value="295"/>
+    <Item id="19" value="296"/>
+    <Item id="81" value="297"/>
+    <Item id="134" value="3"/>
+    <Item id="105" value="30"/>
+    <Item id="85" value="305"/>
+    <Item id="136" value="306"/>
+    <Item id="101" value="307"/>
+    <Item id="137" value="308"/>
+    <Item id="66" value="309"/>
+    <Item id="110" value="31"/>
+    <Item id="132" value="310"/>
+    <Item id="147" value="311"/>
+    <Item id="109" value="32"/>
+    <Item id="39" value="34"/>
+    <Item id="133" value="35"/>
+    <Item id="62" value="36"/>
+    <Item id="106" value="37"/>
+    <Item id="73" value="38"/>
+    <Item id="111" value="40"/>
+    <Item id="44" value="41"/>
+    <Item id="77" value="42"/>
+    <Item id="116" value="44"/>
+    <Item id="78" value="45"/>
+    <Item id="52" value="46"/>
+    <Item id="47" value="48"/>
+    <Item id="49" value="49"/>
+    <Item id="60" value="5"/>
+    <Item id="94" value="50"/>
+    <Item id="95" value="51"/>
+    <Item id="74" value="52"/>
+    <Item id="104" value="53"/>
+    <Item id="115" value="54"/>
+    <Item id="122" value="55"/>
+    <Item id="119" value="56"/>
+    <Item id="90" value="57"/>
+    <Item id="64" value="58"/>
+    <Item id="130" value="59"/>
+    <Item id="108" value="6"/>
+    <Item id="117" value="60"/>
+    <Item id="53" value="61"/>
+    <Item id="112" value="63"/>
+    <Item id="93" value="64"/>
+    <Item id="68" value="65"/>
+    <Item id="139" value="7"/>
+    <Item id="14" value="70"/>
+    <Item id="35" value="71"/>
+    <Item id="32" value="72"/>
+    <Item id="118" value="73"/>
+    <Item id="46" value="74"/>
+    <Item id="31" value="75"/>
+    <Item id="99" value="76"/>
+    <Item id="128" value="77"/>
+    <Item id="146" value="78"/>
+    <Item id="154" value="79"/>
+    <Item id="67" value="8"/>
+    <Item id="142" value="80"/>
+    <Item id="83" value="81"/>
+    <Item id="131" value="82"/>
+    <Item id="40" value="85"/>
+    <Item id="37" value="86"/>
+    <Item id="141" value="87"/>
+    <Item id="127" value="9"/>
+    <Item id="7" value="93"/>
+    <Item id="16" value="94"/>
+    <Item id="15" value="97"/>
+    <Item id="23" value="99"/>
+    <Itemset id="0" numberOfItems="1" support="0.09302325581395349">
+      <ItemRef itemRef="2"/>
+    </Itemset>
+    <Itemset id="1" numberOfItems="1" support="0.1521317829457364">
+      <ItemRef itemRef="6"/>
+    </Itemset>
+    <Itemset id="2" numberOfItems="1" support="0.1332364341085271">
+      <ItemRef itemRef="4"/>
+    </Itemset>
+    <Itemset id="3" numberOfItems="1" support="0.09689922480620156">
+      <ItemRef itemRef="7"/>
+    </Itemset>
+    <Itemset id="4" numberOfItems="1" support="0.122577519379845">
+      <ItemRef itemRef="20"/>
+    </Itemset>
+    <Itemset id="5" numberOfItems="1" support="0.08963178294573644">
+      <ItemRef itemRef="5"/>
+    </Itemset>
+    <Itemset id="6" numberOfItems="1" support="0.06443798449612403">
+      <ItemRef itemRef="12"/>
+    </Itemset>
+    <Itemset id="7" numberOfItems="1" support="0.07412790697674419">
+      <ItemRef itemRef="8"/>
+    </Itemset>
+    <Itemset id="8" numberOfItems="1" support="0.07655038759689922">
+      <ItemRef itemRef="13"/>
+    </Itemset>
+    <Itemset id="9" numberOfItems="1" support="0.06443798449612403">
+      <ItemRef itemRef="23"/>
+    </Itemset>
+    <Itemset id="10" numberOfItems="1" support="0.04796511627906977">
+      <ItemRef itemRef="11"/>
+    </Itemset>
+    <AssociationRule affinity="0.1794871794871795" antecedent="0" confidence="0.4010416666666667" consequent="1" id="0" leverage="0.02315440778799351" lift="2.636146496815286" support="0.03730620155038759"/>
+    <AssociationRule affinity="0.1794871794871795" antecedent="1" confidence="0.2452229299363057" consequent="0" id="1" leverage="0.02315440778799351" lift="2.636146496815286" support="0.03730620155038759"/>
+    <AssociationRule affinity="0.1046511627906977" antecedent="2" confidence="0.1636363636363636" consequent="3" id="2" leverage="0.00889181840033652" lift="1.688727272727273" support="0.02180232558139535"/>
+    <AssociationRule affinity="0.1046511627906977" antecedent="3" confidence="0.225" consequent="2" id="3" leverage="0.00889181840033652" lift="1.688727272727273" support="0.02180232558139535"/>
+    <AssociationRule affinity="0.1453362255965293" antecedent="2" confidence="0.2436363636363636" consequent="4" id="4" leverage="0.0161294487260381" lift="1.987610492274524" support="0.03246124031007752"/>
+    <AssociationRule affinity="0.1453362255965293" antecedent="4" confidence="0.2648221343873518" consequent="2" id="5" leverage="0.0161294487260381" lift="1.987610492274524" support="0.03246124031007752"/>
+    <AssociationRule affinity="0.116331096196868" antecedent="5" confidence="0.2810810810810811" consequent="1" id="6" leverage="0.01155795550147227" lift="1.847615768634877" support="0.0251937984496124"/>
+    <AssociationRule affinity="0.116331096196868" antecedent="1" confidence="0.1656050955414013" consequent="5" id="7" leverage="0.01155795550147227" lift="1.847615768634877" support="0.0251937984496124"/>
+    <AssociationRule affinity="0.1259445843828715" antecedent="1" confidence="0.1592356687898089" consequent="6" id="8" leverage="0.01442174073072532" lift="2.471146017911019" support="0.02422480620155039"/>
+    <AssociationRule affinity="0.1259445843828715" antecedent="6" confidence="0.3759398496240601" consequent="1" id="9" leverage="0.01442174073072532" lift="2.471146017911019" support="0.02422480620155039"/>
+    <AssociationRule affinity="0.0945945945945946" antecedent="1" confidence="0.1560509554140127" consequent="4" id="10" leverage="0.005092373505198006" lift="1.273079731124594" support="0.02374031007751938"/>
+    <AssociationRule affinity="0.0945945945945946" antecedent="4" confidence="0.1936758893280632" consequent="1" id="11" leverage="0.005092373505198006" lift="1.273079731124594" support="0.02374031007751938"/>
+    <AssociationRule affinity="0.2214532871972318" antecedent="3" confidence="0.32" consequent="7" id="12" leverage="0.02382481521543176" lift="4.316862745098039" support="0.0310077519379845"/>
+    <AssociationRule affinity="0.2214532871972318" antecedent="7" confidence="0.4183006535947713" consequent="3" id="13" leverage="0.02382481521543176" lift="4.316862745098039" support="0.0310077519379845"/>
+    <AssociationRule affinity="0.2053872053872054" antecedent="3" confidence="0.305" consequent="8" id="14" leverage="0.02213659034913767" lift="3.984303797468354" support="0.02955426356589147"/>
+    <AssociationRule affinity="0.2053872053872054" antecedent="8" confidence="0.3860759493670886" consequent="3" id="15" leverage="0.02213659034913767" lift="3.984303797468354" support="0.02955426356589147"/>
+    <AssociationRule affinity="0.1443298969072165" antecedent="3" confidence="0.21" consequent="9" id="16" leverage="0.01410484646355387" lift="3.258947368421053" support="0.02034883720930233"/>
+    <AssociationRule affinity="0.1443298969072165" antecedent="9" confidence="0.3157894736842105" consequent="3" id="17" leverage="0.01410484646355387" lift="3.258947368421053" support="0.02034883720930233"/>
+    <AssociationRule affinity="0.1721311475409836" antecedent="7" confidence="0.2745098039215687" consequent="9" id="18" leverage="0.01557218428880476" lift="4.260061919504643" support="0.02034883720930233"/>
+    <AssociationRule affinity="0.1721311475409836" antecedent="9" confidence="0.3157894736842105" consequent="7" id="19" leverage="0.01557218428880476" lift="4.260061919504643" support="0.02034883720930233"/>
+    <AssociationRule affinity="0.13915857605178" antecedent="10" confidence="0.4343434343434344" consequent="4" id="20" leverage="0.01495388836307914" lift="3.543418373457899" support="0.02083333333333333"/>
+    <AssociationRule affinity="0.13915857605178" antecedent="4" confidence="0.1699604743083004" consequent="10" id="21" leverage="0.01495388836307914" lift="3.543418373457899" support="0.02083333333333333"/>
+  </AssociationModel>
+
+</PMML>
+", PmmlVersion="4.1", ModelID=1481906433, Confidence=False, Target="Max(Dept){~} Predictor - Rule(confidence,1)", MaxConsequentSupport="1">(Max([POS Txn]) {~ } , Max(Dept) {~ } )
